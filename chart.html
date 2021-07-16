@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+  <title>Dashboard</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style type="text/css">
+    
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+div#layout {
+  text-align: center;
+}
+
+div#container {
+  width: 1000px;
+  height: 600px;
+  margin: auto;
+  background-color: #2F4A6D;
+}
+
+button{
+background: burlywood;
+    height: 46px;
+    width: 59px;
+  }
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.bar {
+  fill: #80cbc4;
+}
+
+text {
+  font-size: 12px;
+  fill: #fff;
+}
+div {
+    text-align: center;
+    
+}
+
+path {
+  stroke: gray;
+}
+
+line {
+  stroke: gray;
+}
+
+line#limit {
+  stroke: #FED966;
+  stroke-width: 3;
+  stroke-dasharray: 3 6;
+}
+
+.button{
+  text-align: center;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+.grid .tick line {
+  stroke: #9FAAAE;
+  stroke-opacity: 0.3;
+}
+
+div#table-container {
+    margin-left: 33%;
+}
+table th{
+  background-color: gray;
+  color: white;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.buttons{
+  margin-top: 10px;
+  margin-bottom: 10px;
+} 
+
+  </style>
+
+</head>
+<body onload="loadInitaialData()">
+  <div id='layout'>
+    <!-- <h2>Bar chart example</h2> -->
+    <div id='container'>
+      <svg/>
+    </div>
+  </div>
+  <div class="buttons">
+    <button type="button" onclick="filterData(this)" value="1">1</button>
+    <button type="button" onclick="filterData(this)" value="2">2</button>
+    <button type="button" onclick="filterData(this)" value="3">3</button>
+    <button type="button" onclick="filterData(this)" value="4">4</button>
+  </div>
+  <div id="table-container"></div>
+  <script src="myscript.js"></script>
+</body>
+</html>
